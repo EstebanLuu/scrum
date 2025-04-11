@@ -596,7 +596,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
         <div className="flex items-center justify-between">
           <h1 className="text-3xl font-bold tracking-tight">Portal de clientes</h1>
           <div className="flex items-center gap-2">
-            <Button variant="outline" onClick={() => router.push(`/organizations/1`)}>
+            <Button variant="outline" onClick={() => router.push(`/spaces/1`)}>
               <Link2 className="mr-2 h-4 w-4" />
               Ver organización
             </Button>

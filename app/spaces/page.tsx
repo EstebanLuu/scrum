@@ -20,8 +20,8 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { useToast } from "@/hooks/use-toast"
 import Link from "next/link"
 
-export default function OrganizationsPage() {
-  const [organizations, setOrganizations] = useState([
+export default function SpacesPage() {
+  const [spaces, setSpaces] = useState([
     { id: 1, name: "Gestini Software", description: "Empresa principal de desarrollo", workspaces: 5, projects: 12 },
     { id: 2, name: "Cliente Externo A", description: "Cliente de servicios web", workspaces: 3, projects: 4 },
     { id: 3, name: "Cliente Externo B", description: "Cliente de aplicaciones móviles", workspaces: 2, projects: 3 },
@@ -41,14 +41,14 @@ export default function OrganizationsPage() {
     }
 
     const organization = {
-      id: organizations.length + 1,
+      id: spaces.length + 1,
       name: newOrganization.name,
       description: newOrganization.description,
       workspaces: 0,
       projects: 0,
     }
 
-    setOrganizations([...organizations, organization])
+    setSpaces([...spaces, organization])
     setNewOrganization({ name: "", description: "" })
     setOpen(false)
 
@@ -61,7 +61,7 @@ export default function OrganizationsPage() {
   return (
     <div className="flex flex-col gap-6">
       <div className="flex items-center justify-between">
-        <h1 className="text-3xl font-bold tracking-tight">Organizaciones</h1>
+        <h1 className="text-3xl font-bold tracking-tight">Espacios</h1>
         <Dialog open={open} onOpenChange={setOpen}>
           <DialogTrigger asChild>
             <Button>
@@ -111,13 +111,13 @@ export default function OrganizationsPage() {
             <TabsTrigger value="list">Lista</TabsTrigger>
           </TabsList>
           <div className="flex items-center gap-2">
-            <Input placeholder="Buscar organizaciones..." className="w-[200px] md:w-[300px]" />
+            <Input placeholder="Buscar espacios..." className="w-[200px] md:w-[300px]" />
           </div>
         </div>
 
         <TabsContent value="grid" className="space-y-4">
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {organizations.map((organization) => (
+            {spaces.map((organization) => (
               <Card key={organization.id}>
                 <CardHeader className="flex flex-row items-start justify-between space-y-0">
                   <div>
@@ -151,7 +151,7 @@ export default function OrganizationsPage() {
                   </div>
                 </CardContent>
                 <CardFooter>
-                  <Link href={`/organizations/${organization.id}`} className="w-full">
+                  <Link href={`/spaces/${organization.id}`} className="w-full">
                     <Button variant="outline" className="w-full">
                       Ver organización
                     </Button>
@@ -172,7 +172,7 @@ export default function OrganizationsPage() {
                   <div>Proyectos</div>
                   <div className="text-right">Acciones</div>
                 </div>
-                {organizations.map((organization) => (
+                {spaces.map((organization) => (
                   <div key={organization.id} className="grid grid-cols-5 items-center px-4 py-3">
                     <div className="col-span-2">
                       <div className="font-medium">{organization.name}</div>
@@ -181,7 +181,7 @@ export default function OrganizationsPage() {
                     <div>{organization.workspaces}</div>
                     <div>{organization.projects}</div>
                     <div className="flex justify-end gap-2">
-                      <Link href={`/organizations/${organization.id}`}>
+                      <Link href={`/spaces/${organization.id}`}>
                         <Button variant="outline" size="sm">
                           Ver
                         </Button>

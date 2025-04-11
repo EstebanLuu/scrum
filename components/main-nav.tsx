@@ -13,8 +13,8 @@ const navItems = [
     icon: LayoutDashboard,
   },
   {
-    title: "Organizaciones",
-    href: "/organizations",
+    title: "Espacios",
+    href: "/spaces",
     icon: Building2,
   },
   {

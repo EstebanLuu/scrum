@@ -7,7 +7,7 @@ import { Search } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import Link from "next/link"
 
-export default function OrganizationsLayout({
+export default function SpacesLayout({
   children,
 }: {
   children: React.ReactNode

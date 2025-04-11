@@ -763,11 +763,11 @@ export default function OrganizationPage({ params }: { params: { id: string } })
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
-              <BreadcrumbLink href="/organizations">Organizaciones</BreadcrumbLink>
+              <BreadcrumbLink href="/spaces">Espacios</BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
-              <BreadcrumbLink href={`/organizations/${params.id}`}>{organizationName}</BreadcrumbLink>
+              <BreadcrumbLink href={`/spaces/${params.id}`}>{organizationName}</BreadcrumbLink>
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>

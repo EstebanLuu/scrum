@@ -242,15 +242,15 @@ export default function WorkspacePage({ params }: { params: { id: string; worksp
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
-              <BreadcrumbLink href="/organizations">Organizaciones</BreadcrumbLink>
+              <BreadcrumbLink href="/spaces">Espacios</BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
-              <BreadcrumbLink href={`/organizations/${params.id}`}>{organizationName}</BreadcrumbLink>
+              <BreadcrumbLink href={`/spaces/${params.id}`}>{organizationName}</BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
-              <BreadcrumbLink href={`/organizations/${params.id}/workspaces/${params.workspaceId}`}>
+              <BreadcrumbLink href={`/spaces/${params.id}/workspaces/${params.workspaceId}`}>
                 {workspaceName}
               </BreadcrumbLink>
             </BreadcrumbItem>
